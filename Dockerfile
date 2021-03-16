@@ -12,7 +12,7 @@ RUN npm run build
 
 # production stage
 
-COPY --from=build-stage /app/dist /usr/share/nginx/html
+COPY --from=build-stage /app/build /usr/share/nginx/html
 EXPOSE 6070
 
 CMD ["nginx", "-g", "daemon off;"]
