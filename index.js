@@ -46,7 +46,7 @@ http.createServer(async (req, res) => {
         })
 
         // 复制 Dockerfile 到项目
-        fs.copyFileSync(path.resolve(`./Dockerfile`), path.resolve(projectDir, './Dockerfile'))
+        fs.copyFileSync(path.resolve(__dirname, `./Dockerfile`), path.resolve(projectDir, './Dockerfile'))
 
         // 复制 .dockerignore 到项目目录
         fs.copyFileSync(path.resolve(__dirname, `./.dockerignore`), path.resolve(projectDir, './.dockerignore'))
